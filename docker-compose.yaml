@@ -4,3 +4,5 @@ services:
     tesseract:
         build: ./app
         image: tesseract-app:1.0
+        volumes:
+            - ./output:/usr/src/tesseract-app/app/output
