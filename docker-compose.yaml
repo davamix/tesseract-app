@@ -1,0 +1,6 @@
+version: "3.7"
+
+services:
+    tesseract:
+        build: ./app
+        image: tesseract-app:1.0

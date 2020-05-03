@@ -1,0 +1,1 @@
+# Playing with Tesseract 4.1 (Linux)
