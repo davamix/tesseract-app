@@ -4,6 +4,10 @@ from pdf2image import convert_from_path, convert_from_bytes
 from pathlib import Path
 
 def convert_pdf(document_path):
+    if not Path(document_path).exists():
+        print(f"Path {document_path} does not exists")
+        return
+
     images = convert_from_path(document_path)
 
     if len(images) > 0:
