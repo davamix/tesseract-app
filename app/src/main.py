@@ -1,5 +1,4 @@
 import os
-# import tesserocr
 import cv2
 import numpy as np
 from tesserocr import PyTessBaseAPI, RIL, PSM, OEM
@@ -75,7 +74,7 @@ def component_images(image):
 
         save_image(image, "img")
 
-def run():
+def parse_pdf():
     # print(tesserocr.tesseract_version())
     # print(tesserocr.get_languages())
     document_path = Path(Path.cwd(), "src", "documents", "doc1.pdf")
@@ -86,6 +85,14 @@ def run():
     if len(images) > 0:
         component_images(images[0])
     
+def parse_image():
+    image_path = Path(Path.cwd(), "src", "documents", "book.jpeg")
+    
+    image = Image.open(image_path)
+
+    component_images(image)
     
 if __name__ == "__main__":
-    run()
+    # parse_pdf()
+
+    parse_image()
